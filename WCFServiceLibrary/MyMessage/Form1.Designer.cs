@@ -34,6 +34,8 @@
             this.txtReceived = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.btnConnect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtAllMessage
@@ -90,11 +92,30 @@
             this.label2.Text = "Érkezett";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(15, 25);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(279, 20);
+            this.txtAddress.TabIndex = 6;
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.Location = new System.Drawing.Point(300, 25);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(75, 23);
+            this.btnConnect.TabIndex = 7;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 494);
+            this.Controls.Add(this.btnConnect);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtReceived);
@@ -118,6 +139,8 @@
         private System.Windows.Forms.TextBox txtReceived;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Button btnConnect;
     }
 }
 
