@@ -30,5 +30,12 @@ namespace WCFServiceLibrary
             }
             return composite;
         }
+
+
+        public string GetClientIP(string ipAddress)
+        {
+            MessageProxy.Instance.SenIP(ipAddress);
+            return "OK";
+        }
     }
 }

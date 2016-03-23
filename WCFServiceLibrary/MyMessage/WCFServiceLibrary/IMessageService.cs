@@ -15,6 +15,9 @@ namespace WCFServiceLibrary
         string GetMessage(string value);
 
         [OperationContract]
+        string GetClientIP(string ipAddress);
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
