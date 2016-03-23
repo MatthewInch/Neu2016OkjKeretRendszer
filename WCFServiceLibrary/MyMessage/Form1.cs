@@ -24,11 +24,18 @@ namespace MyMessage
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            sendmessage();
+        }
+
+        private void sendmessage()
+        {
             if (txtMessage.Text.Trim() != string.Empty)
             {
                 MessageService.MessageServiceClient client = new MessageService.MessageServiceClient();
                 var output = client.GetMessage(txtMessage.Text);
                 txtAllMessage.Text += output + "\r\n";
+                txtMessage.Text = "";
+                txtMessage.Focus();
             }
         }
 
@@ -79,6 +86,14 @@ namespace MyMessage
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtMessage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                sendmessage();
+            }
         }
     }
 }

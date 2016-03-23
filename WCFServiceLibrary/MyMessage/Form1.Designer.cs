@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtAllMessage = new System.Windows.Forms.TextBox();
             this.txtMessage = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.txtAllMessage.Multiline = true;
             this.txtAllMessage.Name = "txtAllMessage";
             this.txtAllMessage.ReadOnly = true;
+            this.txtAllMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAllMessage.Size = new System.Drawing.Size(363, 346);
             this.txtAllMessage.TabIndex = 0;
             // 
@@ -51,6 +53,7 @@
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(282, 20);
             this.txtMessage.TabIndex = 1;
+            this.txtMessage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMessage_KeyDown);
             // 
             // btnSend
             // 
@@ -68,6 +71,7 @@
             this.txtReceived.Multiline = true;
             this.txtReceived.Name = "txtReceived";
             this.txtReceived.ReadOnly = true;
+            this.txtReceived.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtReceived.Size = new System.Drawing.Size(335, 457);
             this.txtReceived.TabIndex = 3;
             // 
@@ -101,6 +105,7 @@
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.txtAllMessage);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
