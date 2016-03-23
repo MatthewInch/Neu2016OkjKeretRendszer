@@ -30,10 +30,5 @@ namespace WCFServiceLibrary
             }
             return composite;
         }
-
-        public string InitContact(string ipAddress)
-        {
-            return "success";
-        }
     }
 }

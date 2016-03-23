@@ -15,6 +15,7 @@ namespace MyMessage
     public partial class Form1 : Form
     {
         private ServiceHost _host;
+        private ServiceHost _innerHost;
 
         public Form1()
         {
@@ -34,11 +35,18 @@ namespace MyMessage
         private void Form1_Load(object sender, EventArgs e)
         {
             MessageProxy.Instance.SetAction(GetMessage);
+
+
             Task.Factory.StartNew(() =>
            {
                _host = new ServiceHost(typeof(WCFServiceLibrary.MessageService));
                _host.Open();
            });
+            //Task.Factory.StartNew(() =>
+            //{
+            //    _innerHost = new ServiceHost(typeof(InnerService));
+            //    _innerHost.Open();
+            //});
         }
 
         public void GetMessage(string message)
@@ -46,7 +54,7 @@ namespace MyMessage
             try
             {
                 MethodInvoker action = delegate
-                { txtReceived.Text += $"{message}\r\n"; };
+                { txtReceived.Text += String.Format("{0}\r\n", message); };
                 txtReceived.BeginInvoke(action);
             }
             catch(Exception ex)
@@ -60,6 +68,7 @@ namespace MyMessage
             try
             {
                 _host.Close();
+                _innerHost.Close();
             }
             catch
             {
