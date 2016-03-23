@@ -51,6 +51,7 @@
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(282, 20);
             this.txtMessage.TabIndex = 1;
+            this.txtMessage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMessage_KeyDown);
             // 
             // btnSend
             // 
@@ -68,6 +69,7 @@
             this.txtReceived.Multiline = true;
             this.txtReceived.Name = "txtReceived";
             this.txtReceived.ReadOnly = true;
+            this.txtReceived.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtReceived.Size = new System.Drawing.Size(335, 457);
             this.txtReceived.TabIndex = 3;
             // 
