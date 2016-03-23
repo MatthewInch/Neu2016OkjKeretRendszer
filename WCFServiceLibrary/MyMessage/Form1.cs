@@ -33,6 +33,7 @@ namespace MyMessage
                 MessageService.MessageServiceClient client = new MessageService.MessageServiceClient();
                 var output = client.GetMessage(txtMessage.Text);
                 txtAllMessage.Text += output + "\r\n";
+                txtAllMessage.ForeColor = Color.Red;
                 txtMessage.Text = "";
                 txtMessage.Focus();
             }
@@ -62,8 +63,10 @@ namespace MyMessage
             try
             {
                 MethodInvoker action = delegate
-                { txtReceived.Text += $"{message}\r\n"; };
-                txtReceived.BeginInvoke(action);
+                { txtAllMessage.Text += string.Format("{0}\r\n",message); };
+                
+                txtAllMessage.BeginInvoke(action);
+                
             }
             catch(Exception ex)
             {
@@ -95,6 +98,11 @@ namespace MyMessage
             {
                 send();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
