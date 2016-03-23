@@ -28,7 +28,7 @@ namespace MyMessage
             {
                 MessageService.MessageServiceClient client = new MessageService.MessageServiceClient();
                 var output = client.GetMessage(txtMessage.Text);
-                txtAllMessage.Text += output + "\r\n";
+                listBox1.Items.Add($"Te: {output}");
             }
         }
 
@@ -49,13 +49,15 @@ namespace MyMessage
             //});
         }
 
-        public void GetMessage(string message)
+        public void GetMessage(string host, string message)
         {
             try
             {
-                MethodInvoker action = delegate
-                { txtReceived.Text += $"{message}\r\n"; };
-                txtReceived.BeginInvoke(action);
+	            MethodInvoker action = delegate
+	            {
+		            listBox1.Items.Add(message);
+	            };
+                listBox1.BeginInvoke(action);
             }
             catch(Exception ex)
             {

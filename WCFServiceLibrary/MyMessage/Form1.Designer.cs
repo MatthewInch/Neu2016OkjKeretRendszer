@@ -28,81 +28,100 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.txtAllMessage = new System.Windows.Forms.TextBox();
 			this.txtMessage = new System.Windows.Forms.TextBox();
 			this.btnSend = new System.Windows.Forms.Button();
-			this.txtReceived = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.SuspendLayout();
-			// 
-			// txtAllMessage
-			// 
-			this.txtAllMessage.Location = new System.Drawing.Point(12, 136);
-			this.txtAllMessage.Multiline = true;
-			this.txtAllMessage.Name = "txtAllMessage";
-			this.txtAllMessage.ReadOnly = true;
-			this.txtAllMessage.Size = new System.Drawing.Size(363, 346);
-			this.txtAllMessage.TabIndex = 0;
 			// 
 			// txtMessage
 			// 
-			this.txtMessage.Location = new System.Drawing.Point(12, 85);
+			this.txtMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(68)))));
+			this.txtMessage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.txtMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+			this.txtMessage.Location = new System.Drawing.Point(56, 462);
 			this.txtMessage.Name = "txtMessage";
-			this.txtMessage.Size = new System.Drawing.Size(282, 20);
+			this.txtMessage.Size = new System.Drawing.Size(311, 20);
 			this.txtMessage.TabIndex = 1;
 			// 
 			// btnSend
 			// 
-			this.btnSend.Location = new System.Drawing.Point(300, 85);
+			this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSend.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+			this.btnSend.Location = new System.Drawing.Point(373, 459);
 			this.btnSend.Name = "btnSend";
 			this.btnSend.Size = new System.Drawing.Size(75, 23);
 			this.btnSend.TabIndex = 2;
-			this.btnSend.Text = "Send";
+			this.btnSend.Text = "Küldés";
 			this.btnSend.UseVisualStyleBackColor = true;
 			this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-			// 
-			// txtReceived
-			// 
-			this.txtReceived.Location = new System.Drawing.Point(440, 25);
-			this.txtReceived.Multiline = true;
-			this.txtReceived.Name = "txtReceived";
-			this.txtReceived.ReadOnly = true;
-			this.txtReceived.Size = new System.Drawing.Size(335, 457);
-			this.txtReceived.TabIndex = 3;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(12, 117);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(38, 13);
-			this.label1.TabIndex = 4;
-			this.label1.Text = "Válasz";
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(437, 9);
+			this.label2.Location = new System.Drawing.Point(9, 10);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(46, 13);
+			this.label2.Size = new System.Drawing.Size(53, 13);
 			this.label2.TabIndex = 5;
-			this.label2.Text = "Érkezett";
+			this.label2.Text = "Üzenetek";
 			this.label2.Click += new System.EventHandler(this.label2_Click);
+			// 
+			// textBox1
+			// 
+			this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(68)))));
+			this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+			this.textBox1.Location = new System.Drawing.Point(74, 436);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(374, 20);
+			this.textBox1.TabIndex = 6;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(12, 438);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(56, 13);
+			this.label3.TabIndex = 7;
+			this.label3.Text = "Cél IP-cím";
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(9, 464);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(41, 13);
+			this.label4.TabIndex = 7;
+			this.label4.Text = "Üzenet";
+			// 
+			// listBox1
+			// 
+			this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+			this.listBox1.FormattingEnabled = true;
+			this.listBox1.Location = new System.Drawing.Point(12, 26);
+			this.listBox1.Name = "listBox1";
+			this.listBox1.Size = new System.Drawing.Size(436, 405);
+			this.listBox1.TabIndex = 8;
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.MidnightBlue;
-			this.ClientSize = new System.Drawing.Size(787, 494);
+			this.ClientSize = new System.Drawing.Size(460, 494);
+			this.Controls.Add(this.listBox1);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.txtReceived);
 			this.Controls.Add(this.btnSend);
 			this.Controls.Add(this.txtMessage);
-			this.Controls.Add(this.txtAllMessage);
-			this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+			this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
@@ -113,13 +132,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtAllMessage;
         private System.Windows.Forms.TextBox txtMessage;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.TextBox txtReceived;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-    }
+		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.ListBox listBox1;
+	}
 }
 

@@ -9,7 +9,7 @@ namespace WCFServiceLibrary
     public class MessageProxy
     {
         private static readonly MessageProxy _instance = new MessageProxy();
-        private Action<string> _action = null;
+        private Action<string,string> _action = null;
 
         static MessageProxy()
         { }
@@ -22,16 +22,16 @@ namespace WCFServiceLibrary
             }
         }
 
-        public void SetAction(Action<string> action)
+        public void SetAction(Action<string,string> action)
         {
             _action = action;
         }
 
-        public void SendMessage(string message)
+        public void SendMessage(string host, string message)
         {
             if (_action != null)
             {
-                _action(message);
+                _action(host, message);
             }
         }
     }
