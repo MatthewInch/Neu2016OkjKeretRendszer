@@ -119,10 +119,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WCFServiceLibrary\WCFServiceLibrary.csproj">
-      <Project>{a6dfe8f8-7536-4aca-8582-5524c3ab3ad6}</Project>
-      <Name>WCFServiceLibrary</Name>
-    </ProjectReference>
+    <Folder Include="WCFServiceLibrary\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
