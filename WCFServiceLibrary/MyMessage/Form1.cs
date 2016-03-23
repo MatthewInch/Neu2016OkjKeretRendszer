@@ -33,7 +33,7 @@ namespace MyMessage
             {
                 MessageService.MessageServiceClient client = new MessageService.MessageServiceClient();
                 var output = client.GetMessage(txtMessage.Text);
-                txtAllMessage.Text += output + "\r\n";
+                txtAllMessage.AppendText(output + "\r\n");
                 txtMessage.Text = "";
                 txtMessage.Focus();
             }
@@ -61,8 +61,8 @@ namespace MyMessage
             try
             {
                 MethodInvoker action = delegate
-                { txtReceived.Text += String.Format("{0}\r\n", message); };
-                txtReceived.BeginInvoke(action);
+                { txtAllMessage.AppendText( String.Format("{0}\r\n", message)); };
+                txtAllMessage.BeginInvoke(action);
             }
             catch(Exception ex)
             {
