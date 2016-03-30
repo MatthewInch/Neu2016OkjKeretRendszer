@@ -35,7 +35,7 @@ namespace MyMessage
                 if (!checkedListBox1.Items.Contains(client.Endpoint.Address))
                 {
                     checkedListBox1.Items.Add(client.Endpoint.Address);
-                   // checkedListBox1.Items[checkedListBox1.Items.Count - 1].Checked = true;
+                    checkedListBox1.SetItemChecked(checkedListBox1.Items.Count-1,true);
                 }
                 var output = client.GetMessage(txtMessage.Text);
                 richTextBox1.SelectionColor = Color.Blue;

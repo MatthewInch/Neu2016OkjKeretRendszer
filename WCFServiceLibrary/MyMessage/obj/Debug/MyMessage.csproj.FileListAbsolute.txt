@@ -1,0 +1,18 @@
+D:\Prog\Win\WCFTest_Original\WCFServiceLibrary\MyMessage\bin\Debug\MyMessage.exe.config
+D:\Prog\Win\WCFTest_Original\WCFServiceLibrary\MyMessage\bin\Debug\MyMessage.exe
+D:\Prog\Win\WCFTest_Original\WCFServiceLibrary\MyMessage\bin\Debug\MyMessage.pdb
+D:\Prog\Win\WCFTest_Original\WCFServiceLibrary\MyMessage\obj\Debug\MyMessage.csprojResolveAssemblyReference.cache
+D:\Prog\Win\WCFTest_Original\WCFServiceLibrary\MyMessage\obj\Debug\MyMessage.Form1.resources
+D:\Prog\Win\WCFTest_Original\WCFServiceLibrary\MyMessage\obj\Debug\MyMessage.Properties.Resources.resources
+D:\Prog\Win\WCFTest_Original\WCFServiceLibrary\MyMessage\obj\Debug\MyMessage.csproj.GenerateResource.Cache
+D:\Prog\Win\WCFTest_Original\WCFServiceLibrary\MyMessage\obj\Debug\MyMessage.exe
+D:\Prog\Win\WCFTest_Original\WCFServiceLibrary\MyMessage\obj\Debug\MyMessage.pdb
+D:\Dropbox\Dropbox\SCH\Alkalmazás fejlesztés (GY)\WCF\WCFTest_Original\WCFServiceLibrary\MyMessage\bin\Debug\MyMessage.exe.config
+D:\Dropbox\Dropbox\SCH\Alkalmazás fejlesztés (GY)\WCF\WCFTest_Original\WCFServiceLibrary\MyMessage\obj\Debug\MyMessage.exe
+D:\Dropbox\Dropbox\SCH\Alkalmazás fejlesztés (GY)\WCF\WCFTest_Original\WCFServiceLibrary\MyMessage\obj\Debug\MyMessage.pdb
+D:\Dropbox\Dropbox\SCH\Alkalmazás fejlesztés (GY)\WCF\WCFTest_Original\WCFServiceLibrary\MyMessage\bin\Debug\MyMessage.exe
+D:\Dropbox\Dropbox\SCH\Alkalmazás fejlesztés (GY)\WCF\WCFTest_Original\WCFServiceLibrary\MyMessage\bin\Debug\MyMessage.pdb
+D:\Dropbox\Dropbox\SCH\Alkalmazás fejlesztés (GY)\WCF\WCFTest_Original\WCFServiceLibrary\MyMessage\obj\Debug\MyMessage.csprojResolveAssemblyReference.cache
+D:\Dropbox\Dropbox\SCH\Alkalmazás fejlesztés (GY)\WCF\WCFTest_Original\WCFServiceLibrary\MyMessage\obj\Debug\MyMessage.Form1.resources
+D:\Dropbox\Dropbox\SCH\Alkalmazás fejlesztés (GY)\WCF\WCFTest_Original\WCFServiceLibrary\MyMessage\obj\Debug\MyMessage.Properties.Resources.resources
+D:\Dropbox\Dropbox\SCH\Alkalmazás fejlesztés (GY)\WCF\WCFTest_Original\WCFServiceLibrary\MyMessage\obj\Debug\MyMessage.csproj.GenerateResource.Cache
