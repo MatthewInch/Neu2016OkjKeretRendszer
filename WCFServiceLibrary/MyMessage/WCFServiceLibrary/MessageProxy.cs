@@ -10,6 +10,7 @@ namespace WCFServiceLibrary
     {
         private static readonly MessageProxy _instance = new MessageProxy();
         private Action<string> _action = null;
+        private Action<string> _IPAction = null;
 
         static MessageProxy()
         { }
@@ -32,6 +33,17 @@ namespace WCFServiceLibrary
             if (_action != null)
             {
                 _action(message);
+            }
+        }
+        public void SetIPAddressAction(Action<string> action)
+        {
+            _IPAction = action;
+        }
+        public void SetIPAddress(string IPAddress)
+        {
+            if (_IPAction != null)
+            {
+                _IPAction(IPAddress);
             }
         }
     }

@@ -34,6 +34,8 @@
             this.txtReceived = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.IPBox = new System.Windows.Forms.TextBox();
+            this.btnConnect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtAllMessage
@@ -54,7 +56,7 @@
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(300, 85);
+            this.btnSend.Location = new System.Drawing.Point(300, 82);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 23);
             this.btnSend.TabIndex = 2;
@@ -90,11 +92,32 @@
             this.label2.Text = "Érkezett";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // IPBox
+            // 
+            this.IPBox.Font = new System.Drawing.Font("Minion Pro", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IPBox.Location = new System.Drawing.Point(12, 12);
+            this.IPBox.Name = "IPBox";
+            this.IPBox.Size = new System.Drawing.Size(282, 65);
+            this.IPBox.TabIndex = 6;
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnect.Location = new System.Drawing.Point(300, 12);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(134, 62);
+            this.btnConnect.TabIndex = 7;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 494);
+            this.Controls.Add(this.btnConnect);
+            this.Controls.Add(this.IPBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtReceived);
@@ -118,6 +141,8 @@
         private System.Windows.Forms.TextBox txtReceived;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox IPBox;
+        private System.Windows.Forms.Button btnConnect;
     }
 }
 

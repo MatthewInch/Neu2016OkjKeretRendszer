@@ -17,6 +17,8 @@ namespace WCFServiceLibrary
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+        [OperationContract]
+        string GetClienIP(string IP);
         // TODO: Add your service operations here
     }
 
