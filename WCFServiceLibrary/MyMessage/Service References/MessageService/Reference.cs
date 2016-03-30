@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Collections.Generic;
+
 namespace MyMessage.MessageService {
     using System.Runtime.Serialization;
     using System;
@@ -118,7 +120,7 @@ namespace MyMessage.MessageService {
                 base(binding, remoteAddress) {
         }
         
-        public string GetMessage(string value) {
+        public string GetMessage(string value) { 
             return base.Channel.GetMessage(value);
         }
         

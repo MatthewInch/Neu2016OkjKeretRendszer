@@ -10,9 +10,9 @@ namespace WCFServiceLibrary
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class MessageService : IMessageService
     {
-        public string GetMessage(string host, string value)
+        public string GetMessage(string value)
         {
-            MessageProxy.Instance.SendMessage(host, value);
+            MessageProxy.Instance.SendMessage(value);
 			//return string.Format("You entered: {0}", value);
 			return value;
         }

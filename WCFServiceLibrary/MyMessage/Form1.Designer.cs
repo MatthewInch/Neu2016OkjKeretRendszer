@@ -46,6 +46,7 @@
 			this.txtMessage.Name = "txtMessage";
 			this.txtMessage.Size = new System.Drawing.Size(311, 20);
 			this.txtMessage.TabIndex = 1;
+			this.txtMessage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
 			// 
 			// btnSend
 			// 
@@ -126,6 +127,7 @@
 			this.Text = "Form1";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
 			this.Load += new System.EventHandler(this.Form1_Load);
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

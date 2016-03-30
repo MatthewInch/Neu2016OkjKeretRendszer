@@ -22,13 +22,15 @@ namespace MyMessage
             InitializeComponent();
         }
 
+	    private List<EndpointAddress> clientsList = new List<EndpointAddress>(); 
         private void btnSend_Click(object sender, EventArgs e)
         {
             if (txtMessage.Text.Trim() != string.Empty)
             {
-                MessageService.MessageServiceClient client = new MessageService.MessageServiceClient();
-                var output = client.GetMessage(txtMessage.Text);
-                listBox1.Items.Add($"Te: {output}");
+                MessageService.MessageServiceClient client = new MessageService.MessageServiceClient() {Endpoint = { Address = new EndpointAddress($"http://{textBox1.Text}:8080/WCFServiceLibrary/MessageService/") } };
+	            listBox1.Items.Add($"Te: {txtMessage.Text}");
+                /*var output = */client.GetMessage(txtMessage.Text);
+                //listBox1.Items.Add($"Valaki: {output}");
             }
         }
 
@@ -47,15 +49,16 @@ namespace MyMessage
             //    _innerHost = new ServiceHost(typeof(InnerService));
             //    _innerHost.Open();
             //});
+
         }
 
-        public void GetMessage(string host, string message)
+        public void GetMessage(EndpointAddress host, string message)
         {
             try
             {
 	            MethodInvoker action = delegate
 	            {
-		            listBox1.Items.Add(message);
+		            listBox1.Items.Add($"{host}: {message}");
 	            };
                 listBox1.BeginInvoke(action);
             }
@@ -82,5 +85,13 @@ namespace MyMessage
         {
 
         }
-    }
+
+		private void Form1_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyData == Keys.Enter)
+			{
+				btnSend_Click(null, null);
+			}
+		}
+	}
 }

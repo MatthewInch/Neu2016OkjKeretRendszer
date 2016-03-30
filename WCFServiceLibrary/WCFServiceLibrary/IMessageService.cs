@@ -12,7 +12,7 @@ namespace WCFServiceLibrary
     public interface IMessageService
     {
         [OperationContract]
-        string GetMessage(string host, string value);
+        string GetMessage(string value);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
