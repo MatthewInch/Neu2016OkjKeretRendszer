@@ -30,82 +30,111 @@
         {
             this.txtAllMessage = new System.Windows.Forms.TextBox();
             this.txtMessage = new System.Windows.Forms.TextBox();
-            this.btnSend = new System.Windows.Forms.Button();
             this.txtReceived = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tbIP = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtAllMessage
             // 
-            this.txtAllMessage.Location = new System.Drawing.Point(12, 136);
+            this.txtAllMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAllMessage.ForeColor = System.Drawing.Color.White;
+            this.txtAllMessage.Location = new System.Drawing.Point(12, 25);
             this.txtAllMessage.Multiline = true;
             this.txtAllMessage.Name = "txtAllMessage";
             this.txtAllMessage.ReadOnly = true;
-            this.txtAllMessage.Size = new System.Drawing.Size(363, 346);
-            this.txtAllMessage.TabIndex = 0;
+            this.txtAllMessage.Size = new System.Drawing.Size(237, 267);
+            this.txtAllMessage.TabIndex = 2;
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(12, 85);
+            this.txtMessage.BackColor = System.Drawing.Color.Silver;
+            this.txtMessage.Location = new System.Drawing.Point(93, 336);
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(282, 20);
+            this.txtMessage.Size = new System.Drawing.Size(396, 20);
             this.txtMessage.TabIndex = 1;
-            // 
-            // btnSend
-            // 
-            this.btnSend.Location = new System.Drawing.Point(300, 85);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 23);
-            this.btnSend.TabIndex = 2;
-            this.btnSend.Text = "Send";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            this.txtMessage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMessage_KeyDown);
             // 
             // txtReceived
             // 
-            this.txtReceived.Location = new System.Drawing.Point(440, 25);
+            this.txtReceived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtReceived.ForeColor = System.Drawing.Color.White;
+            this.txtReceived.Location = new System.Drawing.Point(255, 25);
             this.txtReceived.Multiline = true;
             this.txtReceived.Name = "txtReceived";
             this.txtReceived.ReadOnly = true;
-            this.txtReceived.Size = new System.Drawing.Size(335, 457);
+            this.txtReceived.Size = new System.Drawing.Size(237, 267);
             this.txtReceived.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 117);
+            this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Válasz";
+            this.label1.Text = "Küldött üzenetek";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(437, 9);
+            this.label2.Location = new System.Drawing.Point(252, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Érkezett";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Text = "Fogadott üzenetek";
+            // 
+            // tbIP
+            // 
+            this.tbIP.BackColor = System.Drawing.Color.Silver;
+            this.tbIP.Location = new System.Drawing.Point(93, 310);
+            this.tbIP.Name = "tbIP";
+            this.tbIP.Size = new System.Drawing.Size(396, 20);
+            this.tbIP.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(9, 313);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Címzett IP címe";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(51, 339);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Üzenet";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(787, 494);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(501, 365);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.tbIP);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtReceived);
-            this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.txtAllMessage);
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ChatApplication";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -117,10 +146,12 @@
 
         private System.Windows.Forms.TextBox txtAllMessage;
         private System.Windows.Forms.TextBox txtMessage;
-        private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.TextBox txtReceived;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbIP;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

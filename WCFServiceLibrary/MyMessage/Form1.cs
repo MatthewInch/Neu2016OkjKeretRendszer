@@ -22,16 +22,6 @@ namespace MyMessage
             InitializeComponent();
         }
 
-        private void btnSend_Click(object sender, EventArgs e)
-        {
-            if (txtMessage.Text.Trim() != string.Empty)
-            {
-                MessageService.MessageServiceClient client = new MessageService.MessageServiceClient();
-                var output = client.GetMessage(txtMessage.Text);
-                txtAllMessage.Text += output + "\r\n";
-            }
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             MessageProxy.Instance.SetAction(GetMessage);
@@ -76,9 +66,17 @@ namespace MyMessage
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void txtMessage_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if(e.KeyCode == Keys.Enter)
+            {
+                if (txtMessage.Text.Trim() != string.Empty)
+                {
+                    MessageService.MessageServiceClient client = new MessageService.MessageServiceClient() { Endpoint = { Address = new EndpointAddress($"http://{tbIP.Text}:8080/WCFServiceLibrary/MessageService/") } };
+                    var output = client.GetMessage(txtMessage.Text);
+                    txtAllMessage.Text += output + "\r\n";
+                }
+            }
         }
     }
 }
