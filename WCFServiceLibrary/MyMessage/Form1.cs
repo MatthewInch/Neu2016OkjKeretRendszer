@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WCFServiceLibrary;
+using System.ServiceModel;
+using System.ServiceModel.Configuration;
 
 namespace MyMessage
 {
@@ -16,6 +18,7 @@ namespace MyMessage
     {
         private ServiceHost _host;
         private ServiceHost _innerHost;
+        private string _connectionIP = "localhost";
 
         public Form1()
         {
@@ -34,6 +37,7 @@ namespace MyMessage
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             MessageProxy.Instance.SetAction(GetMessage);
 
 
@@ -47,6 +51,17 @@ namespace MyMessage
             //    _innerHost = new ServiceHost(typeof(InnerService));
             //    _innerHost.Open();
             //});
+        }
+
+        private void setIP()
+        {
+            EndpointIdentity spn = EndpointIdentity.CreateSpnIdentity("host/mikev-ws");
+            Uri uri = new Uri(_connectionIP);
+            var address = new EndpointAddress(uri, spn);
+            var client = new MessageService.MessageServiceClient("WSHttpBinding_IEchoService", address);
+            //   client.SendEcho("сука");
+            
+            client.Close();
         }
 
         public void GetMessage(string message)
@@ -79,6 +94,11 @@ namespace MyMessage
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bt_connect_Click(object sender, EventArgs e)
+        {
+            string ip = tb_ip.Text;
         }
     }
 }

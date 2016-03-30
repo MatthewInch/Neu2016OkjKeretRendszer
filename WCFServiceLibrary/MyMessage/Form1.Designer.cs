@@ -34,6 +34,9 @@
             this.txtReceived = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tb_ip = new System.Windows.Forms.TextBox();
+            this.la_ip = new System.Windows.Forms.Label();
+            this.bt_connect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtAllMessage
@@ -54,7 +57,7 @@
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(300, 85);
+            this.btnSend.Location = new System.Drawing.Point(300, 84);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 23);
             this.btnSend.TabIndex = 2;
@@ -90,11 +93,40 @@
             this.label2.Text = "Érkezett";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // tb_ip
+            // 
+            this.tb_ip.Location = new System.Drawing.Point(12, 30);
+            this.tb_ip.Name = "tb_ip";
+            this.tb_ip.Size = new System.Drawing.Size(100, 20);
+            this.tb_ip.TabIndex = 6;
+            // 
+            // la_ip
+            // 
+            this.la_ip.AutoSize = true;
+            this.la_ip.Location = new System.Drawing.Point(9, 14);
+            this.la_ip.Name = "la_ip";
+            this.la_ip.Size = new System.Drawing.Size(77, 13);
+            this.la_ip.TabIndex = 7;
+            this.la_ip.Text = "Connection IP:";
+            // 
+            // bt_connect
+            // 
+            this.bt_connect.Location = new System.Drawing.Point(12, 56);
+            this.bt_connect.Name = "bt_connect";
+            this.bt_connect.Size = new System.Drawing.Size(100, 23);
+            this.bt_connect.TabIndex = 8;
+            this.bt_connect.Text = "Connection";
+            this.bt_connect.UseVisualStyleBackColor = true;
+            this.bt_connect.Click += new System.EventHandler(this.bt_connect_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 494);
+            this.Controls.Add(this.bt_connect);
+            this.Controls.Add(this.la_ip);
+            this.Controls.Add(this.tb_ip);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtReceived);
@@ -118,6 +150,9 @@
         private System.Windows.Forms.TextBox txtReceived;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tb_ip;
+        private System.Windows.Forms.Label la_ip;
+        private System.Windows.Forms.Button bt_connect;
     }
 }
 
