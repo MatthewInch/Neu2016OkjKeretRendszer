@@ -28,35 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtAllMessage = new System.Windows.Forms.TextBox();
             this.txtMessage = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
-            this.txtReceived = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtServerIP = new System.Windows.Forms.TextBox();
-            this.btnConnect = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
-            // 
-            // txtAllMessage
-            // 
-            this.txtAllMessage.Location = new System.Drawing.Point(12, 136);
-            this.txtAllMessage.Multiline = true;
-            this.txtAllMessage.Name = "txtAllMessage";
-            this.txtAllMessage.ReadOnly = true;
-            this.txtAllMessage.Size = new System.Drawing.Size(363, 346);
-            this.txtAllMessage.TabIndex = 0;
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(12, 85);
+            this.txtMessage.Location = new System.Drawing.Point(15, 85);
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(282, 20);
             this.txtMessage.TabIndex = 1;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(300, 85);
+            this.btnSend.Location = new System.Drawing.Point(303, 83);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 23);
             this.btnSend.TabIndex = 2;
@@ -64,64 +52,43 @@
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
-            // txtReceived
-            // 
-            this.txtReceived.Location = new System.Drawing.Point(440, 25);
-            this.txtReceived.Multiline = true;
-            this.txtReceived.Name = "txtReceived";
-            this.txtReceived.ReadOnly = true;
-            this.txtReceived.Size = new System.Drawing.Size(335, 457);
-            this.txtReceived.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Válasz";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(437, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Érkezett";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // txtServerIP
             // 
             this.txtServerIP.Location = new System.Drawing.Point(15, 13);
             this.txtServerIP.Name = "txtServerIP";
-            this.txtServerIP.Size = new System.Drawing.Size(163, 20);
+            this.txtServerIP.Size = new System.Drawing.Size(363, 20);
             this.txtServerIP.TabIndex = 6;
             // 
-            // btnConnect
+            // richTextBox1
             // 
-            this.btnConnect.Location = new System.Drawing.Point(185, 13);
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(75, 23);
-            this.btnConnect.TabIndex = 7;
-            this.btnConnect.Text = "Connect";
-            this.btnConnect.UseVisualStyleBackColor = true;
+            this.richTextBox1.Location = new System.Drawing.Point(15, 111);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(363, 371);
+            this.richTextBox1.TabIndex = 8;
+            this.richTextBox1.Text = "";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(384, 13);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(244, 469);
+            this.checkedListBox1.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 494);
-            this.Controls.Add(this.btnConnect);
+            this.ClientSize = new System.Drawing.Size(640, 494);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.txtServerIP);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtReceived);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtMessage);
-            this.Controls.Add(this.txtAllMessage);
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -131,15 +98,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtAllMessage;
         private System.Windows.Forms.TextBox txtMessage;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.TextBox txtReceived;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtServerIP;
-        private System.Windows.Forms.Button btnConnect;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }
 
