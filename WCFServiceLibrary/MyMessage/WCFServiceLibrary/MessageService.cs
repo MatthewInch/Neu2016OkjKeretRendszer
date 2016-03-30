@@ -13,7 +13,7 @@ namespace WCFServiceLibrary
         public string GetMessage(string value)
         {
             MessageProxy.Instance.SendMessage(value);
-            return string.Format("You entered: {0}", value);
+            return string.Format("{0}", value);
         }
 
 

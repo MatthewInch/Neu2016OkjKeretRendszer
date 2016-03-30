@@ -24,12 +24,23 @@ namespace MyMessage
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            
+            this.Cursor = Cursors.WaitCursor;
             if (txtMessage.Text.Trim() != string.Empty)
             {
                 MessageService.MessageServiceClient client = new MessageService.MessageServiceClient();
+                if (txtServerIP.Text != null)
+                {
+                    client.Endpoint.Address = new EndpointAddress((@"http://192.168.8." + txtServerIP.Text+ @":8080/WCFServiceLibrary/MessageService/").ToString());
+                }                
                 var output = client.GetMessage(txtMessage.Text);
-                txtAllMessage.Text += output + "\r\n";
+                richTextBox1.SelectionColor = Color.Blue;
+                richTextBox1.SelectionBackColor = Color.DarkGray;
+                richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+                richTextBox1.SelectedText = output+Environment.NewLine;
+                client.Close();
             }
+            this.Cursor = Cursors.Default;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -54,12 +65,17 @@ namespace MyMessage
             try
             {
                 MethodInvoker action = delegate
-                { txtReceived.Text += String.Format("{0}\r\n", message); };
-                txtReceived.BeginInvoke(action);
+                {
+                    richTextBox1.SelectionColor = Color.Purple;
+                    richTextBox1.SelectionBackColor = Color.DarkGray;
+                    richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
+                    richTextBox1.SelectedText = message + Environment.NewLine;
+                };
+                richTextBox1.BeginInvoke(action);
             }
             catch(Exception ex)
             {
-
+                
             }
         }
 
@@ -79,6 +95,11 @@ namespace MyMessage
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
