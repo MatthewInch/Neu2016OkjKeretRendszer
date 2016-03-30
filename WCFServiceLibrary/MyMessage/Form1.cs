@@ -16,6 +16,7 @@ namespace MyMessage
     {
         private ServiceHost _host;
         private ServiceHost _innerHost;
+        private MessageService.MessageServiceClient _client;
 
         public Form1()
         {
@@ -24,11 +25,17 @@ namespace MyMessage
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            if (txtMessage.Text.Trim() != string.Empty)
+            try
             {
-                MessageService.MessageServiceClient client = new MessageService.MessageServiceClient();
-                var output = client.GetMessage(txtMessage.Text);
-                txtAllMessage.Text += output + "\r\n";
+                if (txtMessage.Text.Trim() != string.Empty && _client != null)
+                {
+                    var output = _client.GetMessage(txtMessage.Text);
+                    txtAllMessage.Text += output + "\r\n";
+                }
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(string.Format("Error: {0}", exp.Message));
             }
         }
 
@@ -72,13 +79,28 @@ namespace MyMessage
             }
             catch
             {
-
             }
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            if (txtServerIP.Text != string.Empty)
+            {
+                if (_client != null)
+                {
+                    _client.Close();
+                    _client = null;
+                }
+
+                _client = new MessageService.MessageServiceClient();
+                _client.Endpoint.Address = new EndpointAddress(string.Format("http://{0}:8080/WCFServiceLibrary/MessageService/", txtServerIP.Text));
+                _client.Open();
+            }
         }
     }
 }
