@@ -44,7 +44,7 @@ namespace MyMessage
                 var Address = new EndpointAddress(uri, EndpointSPN);
 
                 _client = new MessageService.MessageServiceClient();
-                _client.GetMessage(string.Format("{0} csatlakozott hozzád!", "Kismajom"));
+                _client.GetMessage(string.Format("{0} csatlakozott hozzád!", "Jozsef"));
             }
         }
 
