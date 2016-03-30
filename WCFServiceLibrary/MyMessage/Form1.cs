@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace MyMessage
     {
         private ServiceHost _host;
         private ServiceHost _innerHost;
-
+        MessageProxy _maininstance = MessageProxy.Instance;
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +32,12 @@ namespace MyMessage
         {
             if (txtMessage.Text.Trim() != string.Empty)
             {
-                MessageService.MessageServiceClient client = new MessageService.MessageServiceClient();
+                MessageService.MessageServiceClient client = new MessageService.MessageServiceClient()
+                {
+                    Endpoint =
+                    { Address =
+                            new EndpointAddress($"http://{toolStripTextBox1.Text}:8080/WCFServiceLibrary/MessageService/")}
+                };
                 var output = client.GetMessage(txtMessage.Text);
                 txtAllMessage.AppendText(output + "\r\n");
                 txtMessage.Text = "";
@@ -93,6 +99,14 @@ namespace MyMessage
             if (e.KeyCode==Keys.Enter)
             {
                 sendmessage();
+            }
+        }
+
+        private void toolStripTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                
             }
         }
     }

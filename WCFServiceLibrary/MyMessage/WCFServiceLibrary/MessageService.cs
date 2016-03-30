@@ -16,7 +16,11 @@ namespace WCFServiceLibrary
             return string.Format("You entered: {0}", value);
         }
 
-
+        public string GetIP(string value)
+        {
+            MessageProxy.Instance.SendIP(value);
+            return "OK";
+        }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
